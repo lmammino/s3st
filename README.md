@@ -64,6 +64,13 @@ extension, as per the following mapping:
 If you want to disable this option you can specify the flag `--do-not-decompress`
 
 
+## AWS Authentication
+
+The tool will assume you have the proper environment variables or configuration
+files properly set as per the [AWS CLI documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
+in order to authenticate requests to AWS.
+
+
 ## Programmatic usage
 
 This package can also be used programmatically as per the following example:
