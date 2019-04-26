@@ -25,12 +25,8 @@ jobs:
           key: v1-dependencies-v11-{{ checksum "package.json" }}
 
       - run:
-          name: unit tests
+          name: run tests
           command: npm test
-
-      - run:
-          name: coverage reporting
-          command: npm run coverage:submit
 
       - persist_to_workspace:
           root: "."
