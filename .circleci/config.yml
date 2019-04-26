@@ -69,7 +69,7 @@ jobs:
           working_directory: ~/node11
           name: publish
           command: |
-            npm run release:tag && npm run package:publish;
+            npm run release:tag && npm run package:publish && npm publish;
 
       - persist_to_workspace:
           root: "."

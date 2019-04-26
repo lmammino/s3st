@@ -1,6 +1,6 @@
 {
   "name": "s3st",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "A command line utility that allows you to stream data from multiple S3 objects directly into your terminal",
   "main": "src/index.js",
   "bin": {
