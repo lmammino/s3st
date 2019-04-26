@@ -6,7 +6,7 @@ const request = require('request-promise')
 
 const USER_AGENT = 'publish-release-script-1'
 const GH_API_ENDPOINT = 'https://api.github.com'
-const GH_UPLOAD_URL = id => `https://uploads.github.com/repos/lmammino/norrisbot/releases/${id}/assets`
+const GH_UPLOAD_URL = id => `https://uploads.github.com/repos/lmammino/s3st/releases/${id}/assets`
 
 const token = process.argv[2]
 const repo = process.argv[3]
