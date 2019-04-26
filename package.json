@@ -12,10 +12,8 @@
   "engineStrict": true,
   "scripts": {
     "test:lint": "eslint .",
-    "test:unit": "jest",
     "build": "scripts/build.sh",
-    "test": "npm run test:lint && npm run test:unit && npm run build",
-    "coverage:submit": "codecov",
+    "test": "npm run test:lint",
     "release:tag": "git tag $(head -n 1 VERSION) && git push --tags",
     "package:publish": "scripts/publish-release.js $GITHUB_TOKEN lmammino/s3st $npm_package_version"
   },
@@ -47,14 +45,12 @@
     "s3-object-content-stream": "^1.0.1"
   },
   "devDependencies": {
-    "codecov": "^3.3.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "jest": "^24.7.1",
     "nexe": "^3.1.0",
     "request-promise": "^4.2.4"
   }

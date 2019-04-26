@@ -1,0 +1,93 @@
+version: 2
+jobs:
+  build_node11:
+    docker:
+      - image: circleci/node:11
+
+    working_directory: ~/node11
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-v11-{{ checksum "package.json" }}
+            - v1-dependencies-v11-
+            - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-v11-{{ checksum "package.json" }}
+
+      - run:
+          name: unit tests
+          command: npm test
+
+      - run:
+          name: coverage reporting
+          command: npm run coverage:submit
+
+      - persist_to_workspace:
+          root: "."
+          paths:
+            - "."
+
+
+  deploy:
+    docker:
+      - image: circleci/node:11
+
+    steps:
+      - attach_workspace:
+          at: ~/node11
+
+      - run:
+          name: configure NPM registry
+          command: echo "Running in master. Attempting release"
+
+      - run:
+          name: configure NPM registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+
+      - run:
+          name: configure GitHub SSH
+          command: mkdir -p ~/.ssh && ssh-keyscan -H github.com > ~/.ssh/known_hosts
+
+      - run:
+          working_directory: ~/node11
+          name: Setup Git
+          command: git config user.email $GIT_EMAIL && git config user.name $GIT_NAME
+
+      - run:
+          working_directory: ~/node11
+          name: build
+          command: |
+            npm run build;
+
+      - run:
+          working_directory: ~/node11
+          name: publish
+          command: |
+            npm run release:tag && npm run package:publish;
+
+      - persist_to_workspace:
+          root: "."
+          paths:
+            - "."
+
+workflows:
+  version: 2
+  build_test_deploy:
+    jobs:
+      - build_node11
+      - deploy:
+          requires:
+            - build_node11
+          filters:
+            branches:
+              only: master

@@ -5,7 +5,6 @@ directly into your terminal.
 
 [![npm version](https://badge.fury.io/js/s3st.svg)](https://badge.fury.io/js/s3st)
 [![CircleCI](https://circleci.com/gh/lmammino/s3st.svg?style=shield)](https://circleci.com/gh/lmammino/s3st)
-[![Codecov coverage](https://codecov.io/gh/lmammino/s3st/branch/master/graph/badge.svg)](https://codecov.io/gh/lmammino/s3st)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Rationale
@@ -30,6 +29,11 @@ With NPM (Requires Node v10+):
 ```bash
 npm i -g s3st
 ```
+
+Alternatively you can download one of the pre-compiled binaries for linux,
+windows, mac or alpine from the [Releases page](https://github.com/lmammino/s3st/releases).
+
+These binaries do not require you to have Node installed.
 
 
 ## Usage
