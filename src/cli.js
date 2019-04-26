@@ -27,13 +27,19 @@ const transform = program.doNotDecompress ? undefined : decompress
 const s3 = new AWS.S3()
 const stream = createS3stStream(s3, bucket, prefix || '', transform)
 
+const handleErr = (err) => {
+  console.error('Error:', err.message)
+  process.exit(1)
+}
+
+stream.on('error', handleErr)
+
 pipeline(
   stream,
   process.stdout,
   (err) => {
     if (err) {
-      console.error(err)
-      process.exit(1)
+      handleErr(err)
     }
   }
 )
