@@ -9,7 +9,9 @@ directly into your terminal.
 
 ## Demo!
 
-[![asciicast](https://asciinema.org/a/dWJtrXA0HRqDJxndId9Xauz0e.svg)](https://asciinema.org/a/dWJtrXA0HRqDJxndId9Xauz0e)
+![Demo image terminal](s3st.gif)
+
+[See demo on ASCIInema](https://asciinema.org/a/dWJtrXA0HRqDJxndId9Xauz0e)
 
 ## Rationale
 
