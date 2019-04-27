@@ -1,6 +1,6 @@
 {
   "name": "s3st",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A command line utility that allows you to stream data from multiple S3 objects directly into your terminal",
   "main": "src/index.js",
   "bin": {
@@ -12,7 +12,7 @@
   "engineStrict": true,
   "scripts": {
     "test:lint": "eslint src",
-    "build": "scripts/build.sh",
+    "build": "scripts/build.sh $npm_package_version",
     "test": "npm run test:lint",
     "release:tag": "git tag $npm_package_version && git push --tags",
     "package:publish": "scripts/publish-release.js $GITHUB_TOKEN lmammino/s3st $npm_package_version"

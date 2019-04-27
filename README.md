@@ -7,6 +7,10 @@ directly into your terminal.
 [![CircleCI](https://circleci.com/gh/lmammino/s3st.svg?style=shield)](https://circleci.com/gh/lmammino/s3st)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Demo!
+
+[![asciicast](https://asciinema.org/a/dWJtrXA0HRqDJxndId9Xauz0e.svg)](https://asciinema.org/a/dWJtrXA0HRqDJxndId9Xauz0e)
+
 ## Rationale
 
 This utility is particularly useful when you are storing data in S3 and you want
@@ -24,16 +28,28 @@ realtime (gzip, brotli and deflate).
 
 ## Install
 
-With NPM (Requires Node v10+):
+There are several ways to install `s3st`:
+
+### Install global with NPM
+
+(Requires Node v10+):
 
 ```bash
 npm i -g s3st
 ```
 
+### Precompiled binaries
+
 Alternatively you can download one of the pre-compiled binaries for linux,
 windows, mac or alpine from the [Releases page](https://github.com/lmammino/s3st/releases).
 
 These binaries do not require you to have Node installed.
+
+### With [npx](https://www.npmjs.com/package/npx) (use without install)
+
+```bash
+npx s3st some-s3-bucket
+```
 
 
 ## Usage
