@@ -9,9 +9,9 @@ directly into your terminal.
 
 ## Demo!
 
-![Demo image terminal](s3st.gif)
+[![Demo image terminal](s3st.gif)](https://asciinema.org/a/dWJtrXA0HRqDJxndId9Xauz0e)
 
-[See demo on ASCIInema](https://asciinema.org/a/dWJtrXA0HRqDJxndId9Xauz0e)
+[See the FULL demo on asciinema](https://asciinema.org/a/dWJtrXA0HRqDJxndId9Xauz0e)
 
 ## Rationale
 
