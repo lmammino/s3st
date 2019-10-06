@@ -130,6 +130,13 @@ If you want to use the default decompression implementation available by the
 default in the command line client, you can import that from [`s3st/src/transformers/decompress`](/src/transformers/decompress.js).
 
 
+## Data Transfer costs
+
+If you are using this tool to stream large amount of data be aware that this might have an impact on your [data transfer costs](https://blog.cloudability.com/aws-data-transfer-costs/). In such cases, using an alternative approach like [S3 Select](https://docs.aws.amazon.com/AmazonS3/latest/dev/selecting-content-from-objects.html), could be a way to save on cost.
+
+Make sure you are aware of alternatives and that you make careful costs considerations before running any heavy workload in the cloud.
+
+
 ## Contributing
 
 Everyone is very welcome to contribute to this project. You can contribute just by submitting bugs or
