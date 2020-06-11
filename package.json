@@ -1,6 +1,6 @@
 {
   "name": "s3st",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A command line utility that allows you to stream data from multiple S3 objects directly into your terminal",
   "main": "src/index.js",
   "bin": {
@@ -40,24 +40,24 @@
   },
   "homepage": "https://github.com/lmammino/s3st#readme",
   "dependencies": {
-    "aws-sdk": "^2.543.0",
-    "commander": "^3.0.2",
+    "aws-sdk": "^2.694.0",
+    "commander": "^5.1.0",
     "pumpify": "^2.0.1",
-    "readable-stream": "^3.4.0",
+    "readable-stream": "^3.6.0",
     "s3-list-bucket-stream": "^1.0.0",
     "s3-object-content-stream": "^1.0.1"
   },
   "devDependencies": {
-    "acorn": "^7.1.0",
-    "eslint": "^6.5.1",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
+    "acorn": "^7.3.1",
+    "eslint": "^7.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "nexe": "^3.3.2",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4",
-    "request-promise-core": "^1.1.2"
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "request-promise-core": "^1.1.3"
   }
 }
